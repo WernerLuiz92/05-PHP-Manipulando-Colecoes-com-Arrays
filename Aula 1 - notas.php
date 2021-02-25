@@ -1,16 +1,12 @@
 <?php
 
-$notaPortugues = 9;
-$notaMatematica = 3;
-$notaGeografia = 10;
-$notaHistoria = 5;
-$notaQuimica = 10;
+$notas = [9, 3, 10, 5, 10];
 
-$media = ($notaPortugues + $notaMatematica + $notaGeografia + $notaHistoria + $notaQuimica) / 5;
+$media = ($notas[0] + $notas[1] + $notas[2] + $notas[3] + $notas[4]) / count($notas);
 
-echo "A nota de português é: $notaPortugues <br>";
-echo "A nota de matemática é: $notaMatematica <br>";
-echo "A nota de geografia é: $notaGeografia <br>";
-echo "A nota de história é: $notaHistoria <br>";
-echo "A nota de quimica é: $notaQuimica <br>";
+echo "A nota de português é: {$notas[0]} <br>";
+echo "A nota de matemática é: {$notas[1]} <br>";
+echo "A nota de geografia é: {$notas[2]} <br>";
+echo "A nota de história é: {$notas[3]} <br>";
+echo "A nota de quimica é: {$notas[4]} <br>";
 echo "A média é: $media <br>";
