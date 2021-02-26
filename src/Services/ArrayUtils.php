@@ -18,4 +18,23 @@ class ArrayUtils
 
     unset($array[$posicao]);
   }
+
+  public static function encontrarPessoasComSaldoMaiorQue(int $valor, array $array): array
+  {
+    foreach ($array as $titular => $saldo) {
+      if ($saldo > $valor) {
+        $result[$titular] = $saldo;
+      }
+    }
+    return $result;
+  }
+
+  public static function exibirSaldo(string $titular, array $correntistas): string
+  {
+    if (array_key_exists($titular, $correntistas)) {
+      return "O saldo da sua conta é: R$ {$correntistas[$titular]} <br>";
+    }
+
+    return "Correntista não encontrado!";
+  }
 }
